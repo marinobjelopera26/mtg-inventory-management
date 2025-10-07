@@ -17,6 +17,9 @@
 # Mono auto generated files
 mono_crash.*
 
+# JetBrains Rider files
+**/.idea/*
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -416,3 +419,4 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
