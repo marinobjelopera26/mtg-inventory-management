@@ -2,9 +2,9 @@
     <PropertyGroup>
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     </PropertyGroup>
-    
+
     <ItemGroup>
+        <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0"/>
+        <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.0.1"/>
     </ItemGroup>
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.0.1" />
 </Project>
