@@ -11,4 +11,8 @@
         <PackageReference Include="Swashbuckle.AspNetCore" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MGTIM.Infrastructure.Persistence\MGTIM.Infrastructure.Persistence.csproj" />
+    </ItemGroup>
+
 </Project>
