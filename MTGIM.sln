@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTGIM", "src\MTGIM\MTGIM.csproj", "{F438E623-A755-4757-AE0B-0B8C072181A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGTIM.Infrastructure.Persistence", "src\MGTIM.Infrastructure.Persistence\MGTIM.Infrastructure.Persistence.csproj", "{1193AC20-01CD-4947-8E54-FBA6B8309E31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTGIM.Infrastructure.Persistence", "src\MTGIM.Infrastructure.Persistence\MTGIM.Infrastructure.Persistence.csproj", "{1193AC20-01CD-4947-8E54-FBA6B8309E31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,5 @@
-using MGTIM.Infrastructure.Persistence;
-using MGTIM.Infrastructure.Persistence.Entities;
+using MTGIM.Infrastructure.Persistence;
+using MTGIM.Infrastructure.Persistence.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

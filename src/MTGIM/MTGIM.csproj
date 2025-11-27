@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MGTIM.Infrastructure.Persistence\MGTIM.Infrastructure.Persistence.csproj" />
+        <ProjectReference Include="..\MTGIM.Infrastructure.Persistence\MTGIM.Infrastructure.Persistence.csproj"/>
     </ItemGroup>
 
 </Project>
