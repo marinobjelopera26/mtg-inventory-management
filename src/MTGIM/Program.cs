@@ -1,13 +1,11 @@
-using MTGIM.Infrastructure.Persistence;
-using MTGIM.Infrastructure.Persistence.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
-using MTGIM.Options;
+using MTGIM.Infrastructure.Persistence;
+using MTGIM.Infrastructure.Persistence.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,23 +14,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.Configure<DbOptions>(
-    builder.Configuration.GetSection(DbOptions.SectionName));
-
 builder.Services.AddDbContext<ApplicationDbContext>(
-    (serviceProvider, options) =>
+    options =>
     {
-        var dbOptions = serviceProvider.GetRequiredService<IOptions<DbOptions>>().Value;
-        
         options.UseSqlServer(
             builder.Configuration.GetConnectionString("MTGIM"),
-            sqlOptions =>
-            {
-                sqlOptions.CommandTimeout(dbOptions.CommandTimeoutInSeconds);
-            });
+            sqlOptions => sqlOptions.CommandTimeout(30));
 
-        options.EnableDetailedErrors(dbOptions.EnableDetailedErrors);
-        options.EnableSensitiveDataLogging(dbOptions.EnableSensitiveDataLogging);
+        if (builder.Environment.IsDevelopment())
+        {
+            options.EnableDetailedErrors();
+            options.EnableSensitiveDataLogging();
+        }
     })
     .AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
